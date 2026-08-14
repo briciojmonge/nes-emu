@@ -1,0 +1,8 @@
+[target.x86_64-pc-windows-msvc]
+rustflags = ["-Lnative=external/SDL2/lib/x64"]
+runner = ["powershell", "-NoProfile", "-ExecutionPolicy", "Bypass", "-File", "scripts/run-with-sdl2.ps1"]
+
+[env]
+SDL2_DIR = { value = "external/SDL2", relative = true }
+SDL2_LIB_DIR = { value = "external/SDL2/lib/x64", relative = true }
+SDL2_INCLUDE_PATH = { value = "external/SDL2/include", relative = true }
